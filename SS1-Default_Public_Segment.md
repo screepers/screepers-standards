@@ -22,7 +22,7 @@ In order for segments to be useful there needs to be an agreed upon protocol bet
 
   "channels": {
     "alliance": {
-      "segments": [43],
+      "segments": [43,87],
     },
     "needs": {
       "protocol": "market",
