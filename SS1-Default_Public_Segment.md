@@ -36,7 +36,7 @@ In order for segments to be useful there needs to be an agreed upon protocol bet
     },
     "terminals": {
       "protocol": "terminals",
-      "data": ["E34N53", "E65N13" "W52N14"]
+      "data": "[\"E34N53\", \"E65N13\" \"W52N14\"]"
     },
   }
 }
@@ -57,9 +57,11 @@ The `channels` object contains all the information needed to see which protocols
 
 * If there is no `protocol` field set then the channel name is used as the protocol.
 
-* If the `segments` field is defined it should contain an array of segment IDs. To retrieve the message for the channel each segment should be combined together in the order defined by this array.
+* If the `segments` field is defined it should contain an array of segment IDs. To retrieve the message for the channel each segment should be combined together in the order defined by this array. If this field is used the `data` field should not be used.
 
-* If the `data` field is defined it will contain the message for the channel. This data must be a string, as different protocols can have different methods for serialization.
+* If the `data` field is defined it will contain the message for the channel. This data must be a string, as different protocols can have different methods for serialization. If this field is used the `segments` field should not be used.
+
+* The `version` field may optionally be defined for each channel.
 
 * Additional protocol specific options can be added as long as they are prefixed with `x-` so as not to conflict with future changes to this standard.
 
@@ -75,6 +77,7 @@ The `channels` object contains all the information needed to see which protocols
         "<segment numbers>"
       ],
       "data": "<message data>",
+      "version": "<protocol version>",
       "x-custom": "protocal specific"
     }
   }
