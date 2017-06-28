@@ -23,16 +23,19 @@ In order for segments to be useful there needs to be an agreed upon protocol bet
   "channels": {
     "alliance": {
       "segments": [43,87],
+      "update": 19939494
     },
     "needs": {
       "protocol": "market",
       "segments": [48],
-      "x-type": "sell"
+      "x-type": "sell",
+      "update": 19939431
     },
     "overflow": {
       "protocol": "market",
       "segments": [25],
-      "x-type": "buy"
+      "x-type": "buy",
+      "update": 19939431
     },
     "terminals": {
       "protocol": "terminals",
@@ -66,6 +69,8 @@ The `channels` object contains all the information needed to see which protocols
 * If the `data` field is defined it will contain the message for the channel. This data must be a string, as different protocols can have different methods for serialization. If this field is used the `segments` field should not be used.
 
 * The `version` field may optionally be defined for each channel.
+
+* The `update` field may be used to to specify the last tick the channel itself was updated on. This can be used by recieving parties to avoid loading segments and parsing data when it is not needed.
 
 * Additional protocol specific options can be added as long as they are prefixed with `x-` so as not to conflict with future changes to this standard.
 
