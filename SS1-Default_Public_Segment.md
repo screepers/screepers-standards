@@ -18,8 +18,8 @@ In order for segments to be useful there needs to be an agreed upon protocol bet
 {
   "api": {
     "version": "draft",
+    "update": 19939494
   },
-
   "channels": {
     "alliance": {
       "segments": [43,87],
@@ -46,7 +46,11 @@ In order for segments to be useful there needs to be an agreed upon protocol bet
 
 ### api
 
-The `api` object contains metadata specifically about this standard. It can be used to mark version changes for compatibility purposes.
+The `api` object contains metadata specifically about this standard.
+
+The `version` field specifies which version of this standard was in use.
+
+The `update` field contains the tick when the segment was last saved.
 
 
 ### channels
@@ -69,6 +73,7 @@ The `channels` object contains all the information needed to see which protocols
 {
   "api": {
     "version": "draft",
+    "tick": <integer>,
   },
   "channels": {
     "<Name of channel>": {
