@@ -51,9 +51,9 @@ In order for segments to be useful there needs to be an agreed upon protocol bet
 
 The `api` object contains metadata specifically about this standard.
 
-The `version` field specifies which version of this standard was in use.
+* `version` The version of the standard, defined using [Semantic Versioning](http://semver.org/)
 
-The `update` field contains the tick when the segment was last saved.
+* `update` The tick when the public segment was last saved.
 
 
 ### channels
@@ -62,15 +62,21 @@ The `channels` object contains all the information needed to see which protocols
 
 * Each channel is given a name as its key in the `channels` object which points to an object that stores the channel metadata.
 
-* If there is no `protocol` field set then the channel name is used as the protocol.
+* `protocol` (optional) If undefined then the channel name is used as the protocol.
 
-* If the `segments` field is defined it should contain an array of segment IDs. To retrieve the message for the channel each segment should be combined together in the order defined by this array. If this field is used the `data` field should not be used.
+* `version` (optional) Used to specify a specific protocol version for the channel.
 
-* If the `data` field is defined it will contain the message for the channel. This data must be a string, as different protocols can have different methods for serialization. If this field is used the `segments` field should not be used.
+* `update` (optional) The tick the channel was last updated on. This can be used by recieving parties to avoid loading segments and parsing data when it is not needed.
 
-* The `version` field may optionally be defined for each channel.
+* `segments` (optional) A list of segment IDs used to reconstruct the channel message. To retrieve the message for the channel each segment should be combined together in the order defined by this array. If this field is used the `data` field should not be used.
 
-* The `update` field may be used to to specify the last tick the channel itself was updated on. This can be used by recieving parties to avoid loading segments and parsing data when it is not needed.
+* `data` (optional) contains the message for the channel. This data must be a string, as different protocols can have different methods for serialization. If this field is used the `segments` field should not be used.
+
+* `compressed` (optional) If true then the message was compressed using [lzstring's](https://github.com/pieroxy/lz-string) `compressToUTF16` function (to decompress use `decompressFromUTF16`).
+
+* `keyid` (optional) If the message is encrypted this string will represent the key needed to decrypt it. Key exchange and management is outside the scope of this document.
+
+* For a message that is both encrypted and compressed it should be compressed before it is encrypted (end thus should be decrypted before it )
 
 * Additional protocol specific options can be added as long as they are prefixed with `x-` so as not to conflict with future changes to this standard.
 
@@ -87,6 +93,8 @@ The `channels` object contains all the information needed to see which protocols
         "<segment numbers>"
       ],
       "data": "<message data>",
+      "keyid": "<key label>",
+      "compressed": true|false,
       "version": "<protocol version>",
       "x-custom": "protocal specific"
     }
