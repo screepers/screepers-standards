@@ -21,23 +21,17 @@ In order for segments to be useful there needs to be an agreed upon protocol bet
     "update": 19939494
   },
   "channels": {
-    "alliance": {
+    "portals": {
       "segments": [43,87],
       "update": 19939494
     },
     "needs": {
-      "protocol": "market",
+      "protocol": "roomneeds",
       "segments": [48],
-      "x-type": "sell",
-      "update": 19939431
+      "update": 19939431,
+      "keyid": "CF53B61"
     },
-    "overflow": {
-      "protocol": "market",
-      "segments": [25],
-      "x-type": "buy",
-      "update": 19939431
-    },
-    "terminals": {
+    "termcom": {
       "protocol": "terminals",
       "data": "[\"E34N53\", \"E65N13\" \"W52N14\"]"
     },
@@ -107,4 +101,6 @@ The `channels` object contains all the information needed to see which protocols
 
 Since two different protocols with the same name would cause conflicts it is important that protocols get registered to prevent collisions.
 
-Private or in development protocols should be prefixed with `x-` and given as unique a name as possible. Once the protocol has been solidified and is ready to be made public a simply make pull request to this document with the proposed name and a link to its documentation.
+Private or in development protocols should be prefixed with `x-` and given as unique a name as possible.
+
+To register a new protocol make a pull request with its documentation to the [protocols](./protocols) folder.
