@@ -61,7 +61,7 @@ The maximum size the header could be is nine characters. Although developers can
 > Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur iaculis libero erat, sed laoreet nisl lobortis a. Suspendisse dignissim et leo vitae feugiat. Duis tincidunt fringilla nisl, eu facilisis orci euismod cursus. Aliquam tristique, eros quis hendrerit blandit, magna elit vulputate odio, vitae lobortis lacus dolor eget libero. Integer quis tempus lorem. Aenean lobortis purus eget nisi dapibus, semper rutrum ex elementum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Cras cursus tempus leo at cursus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque hendrerit dolor a dolor pharetra malesuada. Integer auctor ornare enim. Ut varius eros in metus tempus fringilla. Quisque accumsan at turpis nec fringilla. Aenean eget lorem cursus, dapibus nulla ut, porta mi. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
 
 
-The above message broken down and given the id `9f2` would be transmitted over ten package like below.
+The above message broken down and given the id `9f2` would be transmitted over ten packets like below.
 
 `9f2|0|10|Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur iaculis libero erat, se`  
 `9f2|1|d laoreet nisl lobortis a. Suspendisse dignissim et leo vitae feugiat. Duis tincidunt frin`  
