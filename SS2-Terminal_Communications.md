@@ -63,7 +63,7 @@ The maximum size the header could be is nine characters. Although developers can
 
 The above message broken down and given the id `9f2` would be transmitted over ten package like below.
 
-`9f2|0|10|Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur iaculis libero erat, se`
+`9f2|0|10|Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur iaculis libero erat, se`  
 `9f2|1|d laoreet nisl lobortis a. Suspendisse dignissim et leo vitae feugiat. Duis tincidunt frin`  
 `9f2|2|gilla nisl, eu facilisis orci euismod cursus. Aliquam tristique, eros quis hendrerit bland`  
 `9f2|3|it, magna elit vulputate odio, vitae lobortis lacus dolor eget libero. Integer quis tempus`  
