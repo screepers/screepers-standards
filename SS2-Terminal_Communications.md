@@ -74,3 +74,14 @@ The above message broken down and given the id `9f2` would be transmitted over t
 `9f2|8|tus tempus fringilla. Quisque accumsan at turpis nec fringilla. Aenean eget lorem cursus, `  
 `9f2|9|dapibus nulla ut, porta mi. Orci varius natoque penatibus et magnis dis parturient montes,`  
 `9f2|10| nascetur ridiculus mus.`  
+
+## Protocols
+
+This standard defines the transmission level protocol for sending data, but it does not supply the higher level protocols needed for actual communication. This should be built by the individual projects as needed.
+
+There are multiple methods to build protocols, but it is expected that the two most common will be by sharing formated text or by sharing json blobs.
+
+An extremely simle example for sharing private keys could look like this-
+
+Request - `key request keyid`
+Response - `key keyid keystring`
