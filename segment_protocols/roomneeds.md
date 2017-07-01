@@ -8,7 +8,7 @@ This protocol uses json for serialization.
 
 ## Format
 
-The protocol message is an object with room names as the keys that point to another object which contains resources as a key with the value needed as a value.
+The protocol message is an object with room names as the keys that point to another object which contains resources as a key with the amount needed as a value. The value may be replaced with a simple `true` boolean to show that the reseource is needed.
 
 
 ## Example
@@ -19,15 +19,15 @@ The protocol message is an object with room names as the keys that point to anot
     "power": 10000,
     "H": 10000,
     "K": 10000,
-    "XGHO2": 10000,
-    "XKH2O": 10000,
+    "XGHO2": true,
+    "XKH2O": true,
   },
   "E37N36": {
     "power": 10000,
     "L": 10000,
     "U": 10000,
-    "XGHO2": 10000,
-    "XKH2O": 10000,
+    "XGHO2": true,
+    "XKH2O": true,
   }
 }
 ```
