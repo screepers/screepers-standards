@@ -33,13 +33,13 @@ For ease of implimentaiton it can be assumed that there will be nine characters 
 The above message broken down and given the id `9f2` would be transmitted over ten package like below.
 
 `9f2|0|10|Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur iaculis libero erat, se`
-`9f2|1|d laoreet nisl lobortis a. Suspendisse dignissim et leo vitae feugiat. Duis tincidunt frin`
-`9f2|2|gilla nisl, eu facilisis orci euismod cursus. Aliquam tristique, eros quis hendrerit bland`
-`9f2|3|it, magna elit vulputate odio, vitae lobortis lacus dolor eget libero. Integer quis tempus`
-`9f2|4| lorem. Aenean lobortis purus eget nisi dapibus, semper rutrum ex elementum. Interdum et m`
-`9f2|5|alesuada fames ac ante ipsum primis in faucibus. Cras cursus tempus leo at cursus. Orci va`
-`9f2|6|rius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque he`
-`9f2|7|ndrerit dolor a dolor pharetra malesuada. Integer auctor ornare enim. Ut varius eros in me`
-`9f2|8|tus tempus fringilla. Quisque accumsan at turpis nec fringilla. Aenean eget lorem cursus, `
-`9f2|9|dapibus nulla ut, porta mi. Orci varius natoque penatibus et magnis dis parturient montes,`
-`9f2|10| nascetur ridiculus mus.`
+`9f2|1|d laoreet nisl lobortis a. Suspendisse dignissim et leo vitae feugiat. Duis tincidunt frin`  
+`9f2|2|gilla nisl, eu facilisis orci euismod cursus. Aliquam tristique, eros quis hendrerit bland`  
+`9f2|3|it, magna elit vulputate odio, vitae lobortis lacus dolor eget libero. Integer quis tempus`  
+`9f2|4| lorem. Aenean lobortis purus eget nisi dapibus, semper rutrum ex elementum. Interdum et m`  
+`9f2|5|alesuada fames ac ante ipsum primis in faucibus. Cras cursus tempus leo at cursus. Orci va`  
+`9f2|6|rius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque he`  
+`9f2|7|ndrerit dolor a dolor pharetra malesuada. Integer auctor ornare enim. Ut varius eros in me`  
+`9f2|8|tus tempus fringilla. Quisque accumsan at turpis nec fringilla. Aenean eget lorem cursus, `  
+`9f2|9|dapibus nulla ut, porta mi. Orci varius natoque penatibus et magnis dis parturient montes,`  
+`9f2|10| nascetur ridiculus mus.`  
