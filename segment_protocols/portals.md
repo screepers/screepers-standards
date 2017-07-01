@@ -11,8 +11,8 @@ This protocol uses json for serialization.
 The protocol message is an object with room names as the keys to an object with the following-
 
 * `destination`: where the portal leads.
-* `unstableDate`: the date a portal becomes unstable.
-* `decayTick`: the exact tick the portal collapses (only available when the portal becomes unstable)
+* `unstableDate` (optional): the date a portal becomes unstable.
+* `decayTick` (optional): the exact tick the portal collapses (only available when the portal becomes unstable)
 
 
 ## Example
