@@ -10,19 +10,50 @@ However, the amount of characters that can be sent in an individual message is l
 * Provide a protocol agnostic method for sending messages over the terminal.
 * Allow messages to be reconstructed from multiple transmissions.
 
+## Background
+
+### Game.market.incomingTransactions
+
+All transactions sent to a terminal owned by a player are recorded in the `Game.market.incomingTransactions` object.
+
+```json
+[{
+    "transactionId" : "56dec546a180ce641dd65960",
+    "time" : 10390687,
+    "sender" : {"username": "Sender"},
+    "recipient" : {"username": "Me"},
+    "resourceType" : "U",
+    "amount" : 100,
+    "from" : "W0N0",
+    "to" : "W10N10",
+    "description" : "trade contract #1",
+    "order": {
+        "id" : "55c34a6b5be41a0a6e80c68b",
+        "type" : "sell",
+        "price" : 2.95
+    }
+}]
+```
+
+The `description` part of the transaction is how messages can be sent from player to player. It is only available when using the `terminal.send` function rather than `Game.market.deal`. This means that all transactions with an `order` object can be ignored as sources of communication.
+
+Since the `incomingTransactions` object is supplied by the game engine it can not be manipulated by other players. This means that, short of hacking the game, it is impossible for a user to send a message pretending to be another user and that the `sender.username` object can be used as a source of authentication.
+
 
 ## Format
 
 `msg_id|packet_id|{total_packets}|message_chunk`
 
-* `msg_id`: The id of the message itself. This must be unique to the player who sent the message, but does not need to be globally unique. The ID can be generated from random
-* `packet_id`: The id of the individual packet being sent. This should be a number, starting at 0, which represents the order in which the message can be reconstructed.
-* `total_packets`: The total number of packets sent as part of the message. This value is only available in the first packet. The max value of this field is `9`.
-* `message_chunk`: The piece of the message.
+* `msg_id`: The id of the message itself. This must be unique to the player who sent the message, but does not need to be globally unique. How the ID is generated does not matter as long as it is an alphanumeric string.
+* `packet_id`: The id of the individual packet being sent. This should be a number, starting at 0, which represents the order in which the message can be reconstructed. The max value of this field is 98 (total packets minus one since packets start at zero).
+* `total_packets`: The total number of packets sent as part of the message. This value is only available in the first packet. The max value of this field is `99`.
+* `message_chunk`: The piece of the message that is being sent.
 
-Message components are delimited by the pipe character (`|`). Terminal Communication packages will always have three alphanumeric characters, followed by a pipe, folowed by at most two characters and another pipe (`abc|12|` or `abc|3|`)
+Message components are delimited by the pipe character (`|`).
 
-For ease of implimentaiton it can be assumed that there will be nine characters in the header of the transmission and 91 characters for the message (although developers can try to pack as much data into each segment as they can).
+Terminal Communication packages will always have three alphanumeric characters, followed by a pipe, folowed by at most two characters and another pipe (`abc|12|` or `abc|3|`)
+
+The maximum size the header could be is nine characters. Although developers can utilize the full length of the message if they wish, for ease of implimentaiton it can be assumed that there will be 91 characters for the message piece in each packet.
 
 
 ## Full Example
