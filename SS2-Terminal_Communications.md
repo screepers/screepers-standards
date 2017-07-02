@@ -51,7 +51,8 @@ Since the `incomingTransactions` object is supplied by the game engine it can no
 
 Message components are delimited by the pipe character (`|`).
 
-Terminal Communication packages will always have three alphanumeric characters, followed by a pipe, folowed by at most two characters and another pipe (`abc|12|` or `abc|3|`)
+Terminal Communication packages will always have three alphanumeric characters, followed by a pipe, folowed by at most two characters and another pipe (`abc|12|` or `abc|3|`). The regular expression `^([\da-zA-Z]+)\|([\d][\d]|[\d])\|.+` can be used to identify which transactions were sent that follow this standard (as well as capturing the `msg_id` and the `packet_id`).
+
 
 The maximum size the header could be is nine characters. Although developers can utilize the full length of the message if they wish, for ease of implimentaiton it can be assumed that there will be 91 characters for the message piece in each packet.
 
