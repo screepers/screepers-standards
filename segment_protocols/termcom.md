@@ -10,11 +10,15 @@ This protocol uses json for serialization.
 
 ## Format
 
-The protocol message should include an array of room names with active terminals that are being monitored for communication.
+* `terminals`: an array of room names with active terminals that are being monitored for communication.
+* `protocols` (optional): a list of protocols supported by the AI.
 
 
 ## Example
 
 ```json
-["E23N43", "E43N39", "W84S12"]
+{
+  "terminals": ["E23N43", "E43N39", "W84S12"],
+  "protocols":["key_exchange", "resource_request"]
+}
 ```
