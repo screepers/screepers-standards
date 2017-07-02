@@ -1,4 +1,4 @@
-# SS2: Terminal Communications
+# SS2: Terminal Communications v1.0.0
 
 Using the `description` field of terminal transactions allows messages be sent securely from player to player.
 
@@ -64,17 +64,17 @@ The maximum size the header could be is nine characters. Although developers can
 
 The above message broken down and given the id `9f2` would be transmitted over ten packets like below.
 
-`9f2|0|10|Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur iaculis libero erat, se`
-`9f2|1|d laoreet nisl lobortis a. Suspendisse dignissim et leo vitae feugiat. Duis tincidunt frin`
-`9f2|2|gilla nisl, eu facilisis orci euismod cursus. Aliquam tristique, eros quis hendrerit bland`
-`9f2|3|it, magna elit vulputate odio, vitae lobortis lacus dolor eget libero. Integer quis tempus`
-`9f2|4| lorem. Aenean lobortis purus eget nisi dapibus, semper rutrum ex elementum. Interdum et m`
-`9f2|5|alesuada fames ac ante ipsum primis in faucibus. Cras cursus tempus leo at cursus. Orci va`
-`9f2|6|rius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque he`
-`9f2|7|ndrerit dolor a dolor pharetra malesuada. Integer auctor ornare enim. Ut varius eros in me`
-`9f2|8|tus tempus fringilla. Quisque accumsan at turpis nec fringilla. Aenean eget lorem cursus, `
-`9f2|9|dapibus nulla ut, porta mi. Orci varius natoque penatibus et magnis dis parturient montes,`
-`9f2|10| nascetur ridiculus mus.`
+`9f2|0|10|Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur iaculis libero erat, se`  
+`9f2|1|d laoreet nisl lobortis a. Suspendisse dignissim et leo vitae feugiat. Duis tincidunt frin`  
+`9f2|2|gilla nisl, eu facilisis orci euismod cursus. Aliquam tristique, eros quis hendrerit bland`  
+`9f2|3|it, magna elit vulputate odio, vitae lobortis lacus dolor eget libero. Integer quis tempus`  
+`9f2|4| lorem. Aenean lobortis purus eget nisi dapibus, semper rutrum ex elementum. Interdum et m`  
+`9f2|5|alesuada fames ac ante ipsum primis in faucibus. Cras cursus tempus leo at cursus. Orci va`  
+`9f2|6|rius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque he`  
+`9f2|7|ndrerit dolor a dolor pharetra malesuada. Integer auctor ornare enim. Ut varius eros in me`  
+`9f2|8|tus tempus fringilla. Quisque accumsan at turpis nec fringilla. Aenean eget lorem cursus, `  
+`9f2|9|dapibus nulla ut, porta mi. Orci varius natoque penatibus et magnis dis parturient montes,`  
+`9f2|10| nascetur ridiculus mus.`  
 
 ## Protocols
 
@@ -87,5 +87,4 @@ An extremely simle example for sharing private keys could look like this-
 Request - `key request keyid`  
 Response - `key keyid keystring`  
 
-Any message that starts with `{` can be assumed to be JSON. 
-
+Any message that starts with `{` can be assumed to be JSON.
