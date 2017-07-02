@@ -42,6 +42,8 @@ Since the `incomingTransactions` object is supplied by the game engine it can no
 
 ## Format
 
+This format should be used for messages that are larger than 100 charactors, as messages shorter than that can be sent in a single packet.
+
 `msg_id|packet_id|{total_packets}|message_chunk`
 
 * `msg_id`: The id of the message itself. This must be unique to the player who sent the message, but does not need to be globally unique. How the ID is generated does not matter as long as it is an alphanumeric string.
