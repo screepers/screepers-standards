@@ -1,4 +1,4 @@
-# SS1: Default Public Segment
+# SS1: Default Public Segment v1.0.0
 
 Public Segments were added to Screeps to provide a way for different players to communicate with each other. Each player can specify any of their segments as public as well as one segment as their default public segment.
 
@@ -77,7 +77,7 @@ The `channels` object contains all the information needed to see which protocols
 ```json
 {
   "api": {
-    "version": "draft",
+    "version": "v1.0.0",
     "tick": <integer>,
   },
   "channels": {
