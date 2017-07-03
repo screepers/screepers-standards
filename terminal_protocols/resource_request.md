@@ -9,8 +9,11 @@ This protocol uses simple text for serialization, with whitespace as the delimit
 
 ## Request
 
-`room [resourceType] [amount]`
 
-`resourceType`: This should be one of the `RESOURCE_*` constants.
+`request [room] [resourceType] [amount]`
 
-`amount`: This optional field can be used to specifiy an amount of resources needed.
+`room`: The room which needs the resources.
+
+`resourceType`: One of the `RESOURCE_*` constants.
+
+`amount`: Optional field that can be used to specifiy an amount of resources needed.
