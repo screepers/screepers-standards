@@ -42,7 +42,7 @@ Since the `incomingTransactions` object is supplied by the game engine it can no
 
 ## Format
 
-This format should be used for messages that are larger than 100 charactors, as messages shorter than that can be sent in a single packet.
+This format should be used for messages that are larger than 100 characters, as messages shorter than that can be sent in a single packet.
 
 `msg_id|packet_id|{total_packets}|message_chunk`
 
