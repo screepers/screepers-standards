@@ -13,6 +13,19 @@ This protocol uses simple text for serialization, with whitespace as the delimit
 
 `keyid`: The identifier for the private key being requested. This should be a purely alphanumeric identifier.
 
+### Responses
+
+Responses to this message are not required.
+
+For successful messages the `Send Key` message described below will be sent.
+
+Keys that are restricted may respond with an unauthorized error. This is not required, and should normally be sent when debugging authorization list code.
+
+`key error unauthorized [keyid]`
+
+If the key does not exist a "not found" error can be returned.
+
+`key error not found [keyid]`
 
 ## Send Key
 
