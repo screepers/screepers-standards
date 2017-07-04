@@ -1,4 +1,4 @@
-# SS2: Terminal Communications v1.0.0
+# SS2: Terminal Communications v1.1.0
 
 Using the `description` field of terminal transactions allows messages be sent securely from player to player.
 
@@ -44,11 +44,11 @@ Since the `incomingTransactions` object is supplied by the game engine it can no
 
 This format should be used for messages that are larger than 100 characters, as messages shorter than that can be sent in a single packet.
 
-`msg_id|packet_id|{total_packets}|message_chunk`
+`msg_id|packet_id|{final_packet}|message_chunk`
 
 * `msg_id`: The id of the message itself. This must be unique to the player who sent the message, but does not need to be globally unique. How the ID is generated does not matter as long as it is an alphanumeric string.
-* `packet_id`: The id of the individual packet being sent. This should be a number, starting at 0, which represents the order in which the message can be reconstructed. The max value of this field is 98 (total packets minus one since packets start at zero).
-* `total_packets`: The total number of packets sent as part of the message. This value is only available in the first packet. The max value of this field is `99`.
+* `packet_id`: The id of the individual packet being sent. This should be a number, starting at 0, which represents the order in which the message can be reconstructed. The max value of this field is 99.
+* `final_packet`: The `package_id` of the last packet in the message. This value is only available in the first packet. The max value of this field is `99`.
 * `message_chunk`: The piece of the message that is being sent.
 
 Message components are delimited by the pipe character (`|`).
