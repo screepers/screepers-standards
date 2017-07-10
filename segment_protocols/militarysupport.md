@@ -16,12 +16,12 @@ The protocol message is an object with room names as the keys that point to anot
 ```json
 {
   "E23N43": {
-    "type": 'defense',
+    "type": "defense",
     "threat": 2,
     "requested": 20155510
   },
   "E26N43": {
-    "type": 'attack',
+    "type": "attack",
     "threat": 1,
     "requested": 20155351
   },
