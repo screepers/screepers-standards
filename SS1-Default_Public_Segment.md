@@ -35,6 +35,11 @@ In order for segments to be useful there needs to be an agreed upon protocol bet
       "protocol": "terminals",
       "data": "[\"E34N53\", \"E65N13\" \"W52N14\"]"
     },
+    "military": {
+      "protocol": "militarysupport",
+      "segments": [28],
+      "update": 19939333
+    },
   }
 }
 ```
