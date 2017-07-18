@@ -78,7 +78,7 @@ The `channels` object contains all the information needed to see which protocols
 {
   "api": {
     "version": "v1.0.0",
-    "tick": <integer>,
+    "update": <integer>,
   },
   "channels": {
     "<Name of channel>": {
