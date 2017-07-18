@@ -17,7 +17,7 @@ In order for segments to be useful there needs to be an agreed upon protocol bet
 ```json
 {
   "api": {
-    "version": "draft",
+    "version": "v1.0.0",
     "update": 19939494
   },
   "channels": {
