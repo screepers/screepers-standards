@@ -70,7 +70,7 @@ The `channels` object contains all the information needed to see which protocols
 
 * `keyid` (optional) If the message is encrypted this string will represent the key needed to decrypt it. Key exchange and management is outside the scope of this document.
 
-* For a message that is both encrypted and compressed it should be compressed before it is encrypted (end thus should be decrypted before it )
+* For a message that is both encrypted and compressed it should be compressed before it is encrypted (and thus should be decrypted before it )
 
 * Additional protocol specific options can be added as long as they are prefixed with `x-` so as not to conflict with future changes to this standard.
 
