@@ -29,7 +29,7 @@ The protocol message is an object with the following keys:
         * `roomWhitelist` (optional): A list of room names that orders must originate from to be included.
         * `roomBlacklist` (optional): A list of room names that orders cannot originate from to be included.
     * `sorting` (optional): An object containing information on how the orders in this set are sorted. This object contains:
-        * `sortRule` (optional): Keyword describing sort rule. If not provided, `bestDeal` is assumed. Options:
+        * `sortRule` (optional): Keyword describing sort rule. If not provided, `bestDeal` is assumed. Possible values:
             * `bestDeal`: Lowest price for sellers / highest price for buyers comes first.
             * `lowestDistance`: Orders closer to `origin` come first.
         * `origin` (optional): Room name used for distance / transaction cost calculations in sorting.
