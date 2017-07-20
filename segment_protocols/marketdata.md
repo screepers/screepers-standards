@@ -44,78 +44,78 @@ The protocol message is an object with the following keys:
 ## Full Example
 
 ```json
-    {
-      "version": "v1.0.0",
-      "update": 19939494,
-      "description": "Just some order data on XGH2O and energy I'm producing for my friends.",
-      "orders": {
-        "XGH2O": {
-          "buyers": [
-            {"id": "5967c300505aa41734441f80", "amount": 1000, "price": 1.552, "roomName": "W53N83"},
-            {"id": "59567c34d88da946917b50b1", "amount": 2166, "price": 1.551, "roomName": "E37N69"},
-            {"id": "592ac1be04cde7f1761a85df", "amount": 100000, "price": 0.14, "roomName": "W21N91"}
-          ],
-          "sellers": [
-            {"id": "58ca3a59e4cd57bb3ebb563a", "amount": 1000, "price": 1.872, "roomName": "E47N35"},
-            {"id": "58ca3adbe4cd57bb3ebb78ce", "amount": 1000, "price": 1.872, "roomName": "W54N53"},
-            {"id": "594b876a1a556a4d3bb3c92c", "amount": 5000, "price": 2, "roomName": "E13S56"}
-          ],
-          "filters": {
-            "resources": ["XGH2O"],
-            "minAmount": 10,
-            "maxOrders": 3
-          },
-          "sorting": {
-            "sortRule": "bestDeal"
-          },
-          "stats": {
-            "processedCount": 100,
-            "buyers": {
-              "betterDeal": 0
-            },
-            "sellers": {
-              "betterDeal": 2
-            }
-          }
+{
+  "version": "v1.0.0",
+  "update": 19939494,
+  "description": "Just some order data on XGH2O and energy I'm producing for my friends.",
+  "orders": {
+    "XGH2O": {
+      "buyers": [
+        {"id": "5967c300505aa41734441f80", "amount": 1000, "price": 1.552, "roomName": "W53N83"},
+        {"id": "59567c34d88da946917b50b1", "amount": 2166, "price": 1.551, "roomName": "E37N69"},
+        {"id": "592ac1be04cde7f1761a85df", "amount": 100000, "price": 0.14, "roomName": "W21N91"}
+      ],
+      "sellers": [
+        {"id": "58ca3a59e4cd57bb3ebb563a", "amount": 1000, "price": 1.872, "roomName": "E47N35"},
+        {"id": "58ca3adbe4cd57bb3ebb78ce", "amount": 1000, "price": 1.872, "roomName": "W54N53"},
+        {"id": "594b876a1a556a4d3bb3c92c", "amount": 5000, "price": 2, "roomName": "E13S56"}
+      ],
+      "filters": {
+        "resources": ["XGH2O"],
+        "minAmount": 10,
+        "maxOrders": 3
+      },
+      "sorting": {
+        "sortRule": "bestDeal"
+      },
+      "stats": {
+        "processedCount": 100,
+        "buyers": {
+          "betterDeal": 0
         },
-        "localEnergy": {
-          "buyers": [
-            {"id": "5967c300505aa41734441f81", "amount": 800, "price": 0.1, "roomName": "E37N68"},
-            {"id": "597045b650a4f73ceb1d52c8", "amount": 30000, "price": 0.016, "roomName": "E36N68"},
-            {"id": "592ac1be04cde7f1761a85de", "amount": 2000, "price": 0.014, "roomName": "E34N68"},
-            {"id": "592ac1be04cde7f1761a85dd", "amount": 4500, "price": 0.015, "roomName": "E41N69"}
-          ],
-          "sellers": [
-            {"id": "58ca3a59e4cd57bb3ebb563b", "amount": 25000, "price": 0.011, "roomName": "E28N72"}
-          ],
-          "filters": {
-            "resources": ["energy"],
-            "minAmount": 100,
-            "maxSellerPrice": 0.015,
-            "maxOrders": 4,
-            "origin": "E35N68",
-            "maxDistance": 10,
-            "roomBlacklist": ["E35N63"]
-          },
-          "sorting": {
-            "sortRule": "bestDeal",
-            "origin": "E35N68",
-            "transactionEnergyValue": 0.01
-          },
-          "stats": {
-            "processedCount": 100,
-            "buyers": {
-              "different": 96,
-              "betterDeal": 48,
-              "missing": 48
-            },
-            "sellers": {
-              "different": 7,
-              "betterDeal": 6,
-              "missing": 1
-            }
-          }
+        "sellers": {
+          "betterDeal": 2
+        }
+      }
+    },
+    "localEnergy": {
+      "buyers": [
+        {"id": "5967c300505aa41734441f81", "amount": 800, "price": 0.1, "roomName": "E37N68"},
+        {"id": "597045b650a4f73ceb1d52c8", "amount": 30000, "price": 0.016, "roomName": "E36N68"},
+        {"id": "592ac1be04cde7f1761a85de", "amount": 2000, "price": 0.014, "roomName": "E34N68"},
+        {"id": "592ac1be04cde7f1761a85dd", "amount": 4500, "price": 0.015, "roomName": "E41N69"}
+      ],
+      "sellers": [
+        {"id": "58ca3a59e4cd57bb3ebb563b", "amount": 25000, "price": 0.011, "roomName": "E28N72"}
+      ],
+      "filters": {
+        "resources": ["energy"],
+        "minAmount": 100,
+        "maxSellerPrice": 0.015,
+        "maxOrders": 4,
+        "origin": "E35N68",
+        "maxDistance": 10,
+        "roomBlacklist": ["E35N63"]
+      },
+      "sorting": {
+        "sortRule": "bestDeal",
+        "origin": "E35N68",
+        "transactionEnergyValue": 0.01
+      },
+      "stats": {
+        "processedCount": 100,
+        "buyers": {
+          "different": 96,
+          "betterDeal": 48,
+          "missing": 48
+        },
+        "sellers": {
+          "different": 7,
+          "betterDeal": 6,
+          "missing": 1
         }
       }
     }
+  }
+}
 ```
