@@ -28,8 +28,8 @@ The protocol message is an object with the following keys:
         * `maxDistance` (optional): Orders must be at or below this distance from `origin` to be included. Assumes wrapping version of distance calculation is used.
         * `roomWhitelist` (optional): A list of room names that orders must originate from to be included.
         * `roomBlacklist` (optional): A list of room names that orders cannot originate from to be included.
-    * `sorting`: An object containing information on how the orders in this set are sorted. This object contains:
-        * `sortRule`: Keyword describing sort rule. Options:
+    * `sorting` (optional): An object containing information on how the orders in this set are sorted. This object contains:
+        * `sortRule` (optional): Keyword describing sort rule. If not provided, `bestDeal` is assumed. Options:
             * `bestDeal`: Lowest price for sellers / highest price for buyers comes first.
             * `lowestDistance`: Orders closer to `origin` come first.
         * `origin` (optional): Room name used for distance / transaction cost calculations in sorting.
@@ -65,18 +65,6 @@ The protocol message is an object with the following keys:
         "resources": ["XGH2O"],
         "minAmount": 10,
         "maxOrders": 3
-      },
-      "sorting": {
-        "sortRule": "bestDeal"
-      },
-      "stats": {
-        "processedCount": 100,
-        "buyers": {
-          "betterDeal": 0
-        },
-        "sellers": {
-          "betterDeal": 2
-        }
       }
     },
     "localEnergy": {
