@@ -44,11 +44,11 @@ Since the `incomingTransactions` object is supplied by the game engine it can no
 
 This format should be used for messages that are larger than 100 characters, as messages shorter than that can be sent in a single packet.
 
-`msg_id|packet_id|{final_packet}|message_chunk`
+`msg_id|packet_id|{final_packet|}message_chunk`
 
-* `msg_id`: The id of the message itself. This must be unique to the player who sent the message, but does not need to be globally unique. How the ID is generated does not matter as long as it is an alphanumeric string.
-* `packet_id`: The id of the individual packet being sent. This should be a number, starting at 0, which represents the order in which the message can be reconstructed. The max value of this field is 99.
-* `final_packet`: The `package_id` of the last packet in the message. This value is only available in the first packet. The max value of this field is `99`.
+* `msg_id`: The id of the message itself, a three-character alphanumeric string. This must be unique to the player who sent the message, but does not need to be globally unique. How the ID is generated does not matter.
+* `packet_id`: The id of the individual packet being sent. This must be an integer, starting at `0`, which represents the order in which the message can be reconstructed. The max value of this field is `99`.
+* `final_packet`: The `package_id` of the last packet in the message. This field is only included in the first packet. The max value of this field is `99`.
 * `message_chunk`: The piece of the message that is being sent.
 
 Message components are delimited by the pipe character (`|`).
@@ -84,7 +84,7 @@ This standard defines the transmission level protocol for sending data, but it d
 
 There are multiple methods to build protocols, but it is expected that the two most common will be by sharing formated text or by sharing json blobs.
 
-An extremely simle example for sharing private keys could look like this-
+An extremely simple example for sharing private keys could look like this-
 
 Request - `key request keyid`  
 Response - `key keyid keystring`  
