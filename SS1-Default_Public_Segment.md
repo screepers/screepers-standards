@@ -103,4 +103,4 @@ Since two different protocols with the same name would cause conflicts it is imp
 
 Private or in development protocols should be prefixed with `x-` and given as unique a name as possible.
 
-To register a new protocol make a pull request with its documentation to the [terminal_protocols](./terminal_protocols) or [segment_protocols](./segment_protocols) folder.
+To register a new protocol make a pull request with its documentation to the [segment_protocols](./segment_protocols) folder.
