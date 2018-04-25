@@ -1,4 +1,4 @@
-# SS3: Unified Credentials File v1.0
+# SS3: Universal Credentials File v1.0
 
 The proliferation of third-party tools and other projects related to Screeps has led to a significant number of different configuration formats for storing account information. Many users are now faced with the difficulty of having to manage the same information in many different configuration files.
 
