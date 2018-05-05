@@ -1,4 +1,4 @@
-# SS3: Universal Credentials File v1.0
+# SS3: Unified Credentials File v1.1
 
 The proliferation of third-party tools and other projects related to Screeps has led to a significant number of different configuration formats for storing account information. Many users are now faced with the difficulty of having to manage the same information in many different configuration files.
 
@@ -20,7 +20,8 @@ The following properties are supported for each server:
 
 ### Connection Properties
 * `host` is required.
-* `port` is needed for servers using a nonstandard TCP port.
+* `port` is needed for servers using a nonstandard (non-80) port for connections.
+* `secure` is needed for servers that do not support SSL encryption (secure defaults to true).
 
 ### Authentication Properties
 * `token` should be set to the authorization token, if used.
@@ -57,6 +58,7 @@ password=th3p4ssw0rd
 
 [botarena]
 host=thunderdome.screepspl.us
+secure=false
 port=21025
 username=dave
 password=screeps123
