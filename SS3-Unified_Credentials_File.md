@@ -18,6 +18,7 @@ Project should look for credentials files in the following locations, using the 
 
 * Project Root (Optional) - (`project/.screeps.yaml`)
 * Current Working Directory - (`./.screeps.yaml`)
+* XDG Config Directory - (`~/.config/screeps/config.yaml`)
 * Home Directory - (`~/.screeps.yaml`)
 
 
@@ -36,6 +37,8 @@ The follow values are supported for each connection:
 * `username` is the screeps username, and is only supported on private servers.
 * `password` is the screeps password, and is only supported on private servers.
 
+It may have a top level `configs` object that contains individual app specific configs.
+
 
 ## Full Example
 
@@ -51,7 +54,7 @@ connections:
     token: '17f70980-eceb-46ba-a4c3-9677a1570f06'
     ptr: true
   screepsplus:
-    host: screepsplus.com
+    host: screepspl.us
     secure: true
     port: 443
     username: bob
@@ -61,4 +64,19 @@ connections:
     secure: false
     username: bob
     password: password123
+configs:
+  screepsconsole:
+    maxHistory: 20000
+    maxScroll: 20000
+  screepsplus-agent:
+    token: screepsPlusToken
+    checkForUpdates: false
+  nuke-announcer:
+    slack:
+      webhook: https://....
+      channel: #thewarpath
+  nuke-announcer-sp:
+    slack:
+      webhook: https://....
+      channel: #screepsplus-warpath
 ```
