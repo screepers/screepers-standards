@@ -20,6 +20,7 @@ Project should look for credentials files in the following locations, using the 
 * Project Root (Optional) - (`project/.screeps.yaml`)
 * Current Working Directory - (`./.screeps.yaml`)
 * XDG Config Directory - (`$XDG_CONFIG_HOME/screeps/config.yaml`)
+* XDG Config Default Directory - (`$HOME/.config/screeps/config.yaml`)
 * APPDATA (Windows Only) - (`%APPDATA%/screeps/config.yaml`)
 * Home Directory - (`~/.screeps.yaml`)
 
