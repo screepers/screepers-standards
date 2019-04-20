@@ -16,9 +16,11 @@ This document seeks to standardize a single file to store Screeps credentials fo
 
 Project should look for credentials files in the following locations, using the first ones they find.
 
+* Env Variable (`$SCREEPS_CONFIG`)
 * Project Root (Optional) - (`project/.screeps.yaml`)
 * Current Working Directory - (`./.screeps.yaml`)
-* XDG Config Directory - (`~/.config/screeps/config.yaml`)
+* XDG Config Directory - (`$XDG_CONFIG_HOME/screeps/config.yaml`)
+* APPDATA (Windows Only) - (`%APPDATA%/screeps/config.yaml`)
 * Home Directory - (`~/.screeps.yaml`)
 
 
