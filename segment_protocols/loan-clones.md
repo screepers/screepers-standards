@@ -1,6 +1,6 @@
 # LOAN clones protocol
 
-This is a list of all known 'clone' accounts. These are users who are running open source bots on their accounts. With aditional information
+This is a list of all known 'clone' accounts. These are users who are running open source bots on their accounts. With additional information
 
 ## Serialization Method
 
