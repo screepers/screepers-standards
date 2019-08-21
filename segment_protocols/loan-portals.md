@@ -8,7 +8,7 @@ This protocol is portals scanned by LOAN
 ## Discovery Channel (Public Segment)
 ```json
 "portals": {
-  "protocol": "x-loan-portals",
+  "protocol": "loan-portals",
   "segments": ["97"],
   "x-url": "https://screepspl.us/data/shard0.portals.min.json",
   "x-desc": "A list rooms with portals and their destinations."
