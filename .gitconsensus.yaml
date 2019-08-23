@@ -21,7 +21,7 @@ pull_requests:
   # 15 days.
   merge_delay: 375
 
-  # Number of votes at which the merge_delay gets ignored, assuming no negative votes.
+  # Number of hours at which the merge_delay gets ignored, assuming no negative votes.
   # 10 Days.
   delay_override: 240
 
