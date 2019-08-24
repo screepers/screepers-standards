@@ -12,7 +12,7 @@ extra_labels: true
 pull_requests:
 
   # How many votes (including abstains) that are required.
-  quorum: 10
+  quorum: 6
 
   # Required percentage of "yes" votes (ignoring abstentions). It's a good idea to give "no" votes more power.
   threshold: 0.74
