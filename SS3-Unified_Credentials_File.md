@@ -46,7 +46,7 @@ It may have a top level `configs` object that contains individual app specific c
 ## Full Example
 
 ```yaml
-connections:
+servers:
   main:
     host: screeps.com
     secure: true
