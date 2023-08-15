@@ -39,6 +39,7 @@ The follow values are supported for each connection:
 * `token` should be set to the authorization token (currently only supported on the public server).
 * `username` is the screeps username, and is only supported on private servers.
 * `password` is the screeps password, and is only supported on private servers.
+* `path` is an optional URL prefix (eg `/ptr` or `/season`) to be used to specify which environment to upload to.
 
 It may have a top level `configs` object that contains individual app specific configs.
 
@@ -51,11 +52,16 @@ servers:
     host: screeps.com
     secure: true
     token: '35a345b9-bc6b-4855-8566-66b341913f9b'
+  seasonal:
+    host: screeps.com
+    secure: true
+    token: '35a345b9-bc6b-4855-8566-66b341913f9b'
+    path: /season
   ptr:
     host: screeps.com
     secure: true
     token: '17f70980-eceb-46ba-a4c3-9677a1570f06'
-    ptr: true
+    path: /ptr
   screepsplus:
     host: screepspl.us
     secure: true
